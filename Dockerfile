@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
+FROM 1021723335/fcos_img:v1.4.6
  
 RUN conda install -y ipython
 RUN pip install ninja yacs cython matplotlib opencv-python tqdm scipy torchsampler
