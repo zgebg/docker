@@ -1,5 +1,9 @@
 FROM 1021723335/fcos_img:v1.4.6
 
+RUN apt-get update \
+    apt-get upgrade \
+    apt-get install git
+
 RUN conda install -y ipython
 RUN pip install ninja yacs cython matplotlib opencv-python tqdm scipy torchsampler
  
