@@ -1,7 +1,7 @@
 FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
  
 RUN conda install -y ipython
-RUN pip install ninja yacs cython matplotlib opencv-python tqdm scipy
+RUN pip install ninja yacs cython matplotlib opencv-python tqdm scipy torchsampler
  
 RUN git clone https://github.com/cocodataset/cocoapi.git \
  && cd cocoapi/PythonAPI \
