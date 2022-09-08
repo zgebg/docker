@@ -1,6 +1,7 @@
 FROM 1021723335/fcos_img:v1.4.6
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update \
+ && apt-get install -y git
 ENTRYPOINT ["git"]
 
 RUN conda install -y ipython
