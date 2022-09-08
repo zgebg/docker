@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-devel
+FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
  
 RUN conda install -y ipython
 RUN pip install ninja yacs cython matplotlib opencv-python tqdm
