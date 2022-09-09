@@ -1,9 +1,7 @@
-FROM 1021723335/fcos_img:v1.4.6
-
-RUN apt-get update && apt-get install -y git
+FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
 
 RUN conda install -y ipython
-RUN pip install ninja yacs cython matplotlib opencv-python tqdm scipy torchsampler
+RUN pip install ninja yacs cython matplotlib tqdm scipy torchsampler
  
 RUN git clone https://github.com/cocodataset/cocoapi.git \
  && cd cocoapi/PythonAPI \
