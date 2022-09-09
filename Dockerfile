@@ -1,10 +1,6 @@
-FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
+FROM 1021723335/fcos_img:v1.4.6
 
-RUN apt-get update && apt-get install -y \
- ffmpeg \
- libsm6 \
- libxext6 \
- libgl1
+RUN apt-get update && apt-get install -y git
 
 RUN conda install -y ipython
 RUN pip install ninja yacs cython matplotlib opencv-python tqdm scipy torchsampler
