@@ -1,6 +1,6 @@
 FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-devel
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install git
 
 RUN conda install -y ipython
 RUN pip install opencv-python==3.4.2.17
