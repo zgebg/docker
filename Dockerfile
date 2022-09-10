@@ -6,5 +6,6 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx libpci-dev curl nano ps
 RUN conda install -y ipython
 RUN pip install ninja yacs cython matplotlib tqdm scipy torchsampler scikit-image opencv-python
 
-RUN git clone https://github.com/cocodataset/cocoapi.git && cd cocoapi/PythonAP
-RUN python setup.py build_ext install
+RUN git clone https://github.com/cocodataset/cocoapi.git \
+ && cd cocoapi/PythonAPI \
+ && python setup.py build_ext install
