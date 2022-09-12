@@ -9,3 +9,7 @@ RUN pip install ninja yacs cython matplotlib tqdm scipy torchsampler scikit-imag
 RUN git clone https://github.com/cocodataset/cocoapi.git \
  && cd cocoapi/PythonAPI \
  && python setup.py build_ext install
+
+RUN git clone https://github.com/tianzhi0549/FCOS.git \
+ && cd FCOS \
+ && python setup.py build develop --no-deps
